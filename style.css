@@ -1,0 +1,193 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+:root {
+  --primary: #005288;
+  --primary-dark: #003366;
+  --bg-light: #f0f4f8;
+  --text: #333;
+  --white: #fff;
+}
+
+* {
+  margin: 0; padding: 0; box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: var(--bg-light);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Navbar */
+header {
+  background: var(--primary);
+  padding: 20px 0;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.logo {
+  color: var(--white);
+  font-size: 28px;
+  font-weight: bold;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+nav a {
+  color: var(--white);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color .3s;
+}
+nav a:hover, nav a.active {
+  color: #cfe8ff;
+}
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Hero */
+.hero {
+  background: url('https://via.placeholder.com/1200x400') center/cover no-repeat;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+  text-align: center;
+  padding: 0 20px;
+}
+.hero-content {
+  background: rgba(0,0,0,0.4);
+  padding: 30px;
+  border-radius: 8px;
+  max-width: 700px;
+}
+.hero h2 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+.hero p {
+  font-size: 1.1rem;
+  margin-bottom: 25px;
+}
+.btn {
+  display: inline-block;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 5px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background .3s;
+}
+.btn.primary {
+  background: var(--primary);
+  color: var(--white);
+  text-decoration: none;
+}
+.btn.primary:hover {
+  background: var(--primary-dark);
+}
+.btn.secondary {
+  background: transparent;
+  border: 2px solid var(--white);
+  color: var(--white);
+}
+
+/* Sections */
+section {
+  padding: 60px 0;
+}
+h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  color: var(--primary);
+}
+
+/* Services cards */
+.service-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+.service-card {
+  background: var(--white);
+  border-radius: 8px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.05);
+  width: 250px;
+  padding: 20px;
+  text-align: center;
+  transition: transform .3s;
+}
+.service-card:hover {
+  transform: translateY(-5px);
+}
+.service-card img {
+  width: 80px;
+  margin-bottom: 15px;
+}
+
+/* Contact form */
+form input, form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+form button {
+  background: var(--primary);
+  color: var(--white);
+  padding: 12px 30px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background .3s;
+}
+form button:hover {
+  background: var(--primary-dark);
+}
+.contact-info {
+  text-align: center;
+  margin-top: 25px;
+  font-size: 1rem;
+}
+
+/* Footer */
+footer {
+  background: var(--primary);
+  color: var(--white);
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 40px;
+  font-size: .9rem;
+}
+
+/* Responsive */
+@media(max-width:768px){
+  nav ul {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+  .hero {
+    height: 300px;
+  }
+  .hero h2 {
+    font-size: 2rem;
+  }
+}
